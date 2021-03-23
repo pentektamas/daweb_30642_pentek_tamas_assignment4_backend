@@ -12,8 +12,8 @@ class DoctorController extends Controller
 {
     public function getDoctorAppointments(Request $request)
     {
-        /*$request->validate([
-            'name' => 'required']);*/
+        $request->validate([
+            'name' => 'required']);
 
         $appointments = DB::table('appointments')
             ->select('date', 'time', 'userID')
